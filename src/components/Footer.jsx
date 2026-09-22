@@ -1,8 +1,26 @@
-import React from 'react'
+import React, { useState } from 'react'
 import assets from '../assets/assets'
 import { motion } from "motion/react"
+import toast from 'react-hot-toast'
 
 function Footer({theme}) {
+
+  const [email, setEmail] = useState('')
+
+  const handleSubscribe = () => {
+    if (!email.trim()) {
+      toast.error('Please enter your email')
+      return
+    }
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+    if (!emailPattern.test(email)) {
+      toast.error('Please enter a valid email')
+      return
+    }
+    toast.success('Subscribed successfully!')
+    setEmail('')
+  }
+
   return (
     <motion.div
     initial={{ opacity: 0, y: 50}}
@@ -26,7 +44,7 @@ function Footer({theme}) {
           <ul className='flex gap-8'>
             <li><a className='hover:text-primary' href='#hero'>Home</a></li>
             <li><a className='hover:text-primary' href='#services'>Services</a></li>
-            <li><a className='hover:text-primary' href='#our-work'>Our Work</a></li>
+            <li><a className='hover:text-primary' href='#Our-work'>Our Work</a></li>
             <li><a className='hover:text-primary' href='#contact-us'>Contact Us</a></li>
           
           </ul>
@@ -42,9 +60,11 @@ function Footer({theme}) {
           <p className='text-sm mt-2 mb-6'>The latest news, articles, and resources, sent to your inbox weekly.</p>
        <div className='flex gap-2 text-sm'>
         <input type="email" placeholder='Enter your email'
+        value={email}
+        onChange={(e) => setEmail(e.target.value)}
         className='w-full p-3 text-sm outline-none rounded dark:text-gray-200
         bg-transparent border border-gray-300 dark:border-gray-500'/>
-        <button className='bg-blue-700 text-white rounded px-6'>Subscribe</button>
+        <button onClick={handleSubscribe} className='bg-blue-700 text-white rounded px-6'>Subscribe</button>
        </div>
         </motion.div>
        </div>

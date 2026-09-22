@@ -36,7 +36,7 @@ const Navbar = ({ theme, setTheme }) => {
       {/* Desktop Menu */}
       <div className='hidden sm:flex items-center gap-8 text-sm font-medium text-gray-700 dark:text-white'>
 
-        <a href='#Home' className='hover:text-blue-500 transition-colors'>
+        <a href='hero' className='hover:text-blue-500 transition-colors'>
           Home
         </a>
 
@@ -44,11 +44,11 @@ const Navbar = ({ theme, setTheme }) => {
           Services
         </a>
 
-        <a href='#our-Work' className='hover:text-blue-500 transition-colors'>
+        <a href='#Our-work' className='hover:text-blue-500 transition-colors'>
           Our Work
         </a>
 
-        <a href='#contact-Us' className='hover:text-blue-500 transition-colors'>
+        <a href='#contact-us' className='hover:text-blue-500 transition-colors'>
           Contact Us
         </a>
       </div>
@@ -71,7 +71,7 @@ const Navbar = ({ theme, setTheme }) => {
 
         {/* Desktop Button */}
         <a
-          href='#contact-Us'
+          href='#contact-us'
           className='hidden sm:flex items-center gap-2
           bg-blue-500 hover:bg-blue-600
           text-white px-6 py-2 rounded-full
@@ -104,7 +104,7 @@ const Navbar = ({ theme, setTheme }) => {
               onClick={() => setSidebarOpen(false)}
             />
 
-            <a onClick={() => setSidebarOpen(false)} href='#Home'>
+            <a onClick={() => setSidebarOpen(false)} href='#hero'>
               Home
             </a>
 
@@ -112,11 +112,11 @@ const Navbar = ({ theme, setTheme }) => {
               Services
             </a>
 
-            <a onClick={() => setSidebarOpen(false)} href='#our-Work'>
+            <a onClick={() => setSidebarOpen(false)} href='#Our-work'>
               Our Work
             </a>
 
-            <a onClick={() => setSidebarOpen(false)} href='#contact-Us'>
+            <a onClick={() => setSidebarOpen(false)} href='#contact-us'>
               Contact Us
             </a>
 
