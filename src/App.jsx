@@ -61,7 +61,7 @@ function App() {
 
 
 
-  const [theme ,setTheme] = useState(localStorage.getItem('theme') ? localStorage.getItem('theme') : 'light')
+  const [theme ,setTheme] = useState(localStorage.getItem('theme') ? localStorage.getItem('theme') : 'dark')
   useEffect(()=>{
     if(theme === 'dark')
     {
