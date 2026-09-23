@@ -36,7 +36,7 @@ const Navbar = ({ theme, setTheme }) => {
       {/* Desktop Menu */}
       <div className='hidden sm:flex items-center gap-8 text-sm font-medium text-gray-700 dark:text-white'>
 
-        <a href='hero' className='hover:text-blue-500 transition-colors'>
+        <a href='#hero' className='hover:text-blue-500 transition-colors'>
           Home
         </a>
 
